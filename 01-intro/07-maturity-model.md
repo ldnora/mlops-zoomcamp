@@ -12,21 +12,41 @@ The maturity model helps us choose the amount of automation a project actually n
 
 At level 0, we work in a notebook without a proper pipeline, experiment tracking, or model metadata. A data scientist may give the notebook to an engineer, who then reimplements it for a service. This level is often enough for an early proof of concept.
 
+- No automation;
+- All code in jupyter;
+- Its good for the experimentation.
+
 ## Level 1: DevOps without MLOps
 
 At level 1, the team adopts normal software engineering practices. Releases are automated, tests cover the service, CI/CD runs the checks, and operational metrics show whether the service is available. The team still lacks ML-specific tracking, easy model reproduction, and a clear connection between the data scientists and engineers.
+
+- DevOps practices.
 
 ## Level 2: automated training
 
 At level 2, a command such as `python train.py` runs the training process without opening a notebook. The script accepts parameters such as the training month, records experiments, and identifies the model currently in production. Deployment may still be manual, but the training process is repeatable and low friction.
 
+- You have a traning pipeline, you don't put your hand to run any jupyter notebook, just run the code and make a mate;
+- DS and engeneers work together;
+- I created a automated training at ClassiCor project.
+
+
 ## Level 3: automated deployment
 
 At level 3, the trained model moves to a serving platform as part of the workflow. The platform can expose a model endpoint and may support A/B tests that compare two model versions. Monitoring becomes part of the deployment process because we need to know whether the model works after it starts serving traffic.
 
+- Easy to deploy the model and create a API to use it in a web service, for example;
+- Evaluate the models trained with automated tests, like A/B;
+- Monitore the models in production.
+
+
 ## Level 4: full MLOps automation
 
 At level 4, monitoring can trigger the rest of the process. The system detects model drift or a performance drop. It starts training, evaluates the new model, deploys it, and rolls it out to users when the result is better.
+
+
+- You need to be pragmatic to choose this level, because it's costly.
+
 
 ## Choose the level pragmatically
 
