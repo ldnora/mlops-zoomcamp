@@ -8,6 +8,8 @@ next_url: 02-mlflow-getting-started.md
 
 Experiment tracking records the information that changes while we build a model. It helps us reproduce a result, compare trials, and return to an earlier decision instead of relying on a spreadsheet or memory.
 
+- We are scientists, then we need to track our experiments. 
+
 ## Experiments, runs, and artifacts
 
 An experiment is the larger modeling activity, such as trying several algorithms and hyperparameters for taxi duration prediction. Each trial is a run. A run can record parameters, metrics, and metadata. It can also keep files and a trained model.
