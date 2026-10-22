@@ -1,7 +1,7 @@
 mlflow
 jupyter
 scikit-learn
-pandas
+# pandas
 seaborn
 hyperopt
 xgboost
