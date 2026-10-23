@@ -11,6 +11,9 @@ next_url: 05-model-registry.md
 
 Experiment tracking covers the trials that create models. After we select a candidate, we keep its model and lineage together. We also keep the parameters and metrics so another person can evaluate and deploy it.
 
+- It is an area within MLOps;
+- The model management is semehant to use git to version the code;
+
 ## From experiments to a model
 
 The ML lifecycle moves from tuning to a decision about which model is ready for further use. At that point, we need to know which data and code produced it. We also need the parameters, evaluation results, and files that belong to it.
