@@ -120,4 +120,4 @@ with mlflow.start_run():
     mlflow.log_artifact("02-experiment-tracking/models/preprocessor.b",
                         artifact_path="preprocessor")
 
-    mlflow.xgboost.log_model(booster, name="models_mlflow")
+    mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
