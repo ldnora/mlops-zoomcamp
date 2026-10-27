@@ -11,6 +11,9 @@ next_url: 06-mlflow-in-practice.md
 
 A model registry gives the modeling and deployment teams a shared list of model versions. It doesn't deploy a model. It records which versions are candidates, what run produced each version, and which version the team has chosen for a stage of its process.
 
+- Version models for the team
+- Model resgistry is different from model tracking, because the second occours at the training, while the first is used for the registry the models ready to go to prodution. The deploy guy can see about the hyperparameters, tracking, dependencies and other important information about the model to deploy it
+
 ## Register a model version
 
 After comparing runs, register the selected model in MLflow. Give the registered model a meaningful name, then attach the run that created it. The registry keeps a version number and links it back to the source run.

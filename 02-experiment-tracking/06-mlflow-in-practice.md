@@ -41,3 +41,9 @@ mlflow.set_experiment('nyc-taxi-experiment')
 ![A run communicating with the remote MLflow server](images/06-mlflow-in-practice-03-remote-run.jpg)
 
 The remote setup lets teammates share experiments, but AWS services can incur charges. Shut down resources you no longer need and keep database credentials private.
+
+
+
+# MLflow configuration
+
+Backend store can be storead in local filesystem. 
