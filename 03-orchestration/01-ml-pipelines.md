@@ -17,11 +17,12 @@ In the first module we explored a notebook. Here we turn that exploration into a
 
 A training pipeline can be represented as a directed sequence:
 
-1. Download the data.
-2. Transform it and remove invalid or extreme records.
-3. Prepare features and labels for machine learning.
-4. Search for useful hyperparameters.
-5. Train the final model with the selected parameters.
+1. Download the data -> ingestion the data
+2. Preprocessing the data -> data cleaning, sampling data, dimensionality reduction, data transformation, feature engineering and imbalanced data [ref](https://www.geeksforgeeks.org/data-analysis/data-preprocessing-machine-learning-python/)
+3. Hyperparameter tuning -> find the best values of the hyperparameters
+4. Train the final model with the selected parameters
+
+- There are the model registry at the tuning and the train
 
 The exact steps depend on the problem, but the important change is that the workflow is explicit. Each step can be rerun, inspected, and replaced without redoing unrelated notebook cells.
 
@@ -31,7 +32,7 @@ The exact steps depend on the problem, but the important change is that the work
 
 An ML pipeline describes the work and its dependencies.
 
-Orchestration is the operational layer that runs the pipeline and handles four operational concerns:
+Orchestration is the operational layer that runs the pipeline and handles three operational concerns:
 
 - scheduling runs and passing parameters.
 - recording status and retrying failures.
@@ -39,9 +40,11 @@ Orchestration is the operational layer that runs the pipeline and handles four o
 
 Start with Python functions, then connect them to an orchestrator such as Airflow or Prefect. Dagster, Kestra, and Mage are also options.
 
-We want a runnable, reproducible, parameterized process. For example, a training run should receive a data period rather than use whichever files happen to be present in a notebook session.
+We want a runnable, reproducible, parameterized process and automatizated. For example, a training run should receive a data period rather than use whichever files happen to be present in a notebook session.
 
 ![A training script broken into explicit functions](images/01-ml-pipelines-03-functions.jpg)
+
+- The orquestration includes the lifecycle of AI solutions. 
 
 ## A useful boundary
 
