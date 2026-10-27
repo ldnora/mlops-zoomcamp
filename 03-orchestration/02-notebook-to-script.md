@@ -49,3 +49,12 @@ Record the data period, feature choices, model parameters, and evaluation metric
 ![A parameterized script run with its MLflow output](images/02-notebook-to-script-04-run.jpg)
 
 This script is now a pipeline entry point. An orchestrator can call it with different periods, schedule it, retry it, or backfill historical periods without opening a notebook.
+
+
+## Problems
+
+This problems can happen using a local pipeline:
+- The internet can down and you can loose your data, if you don't download it on your machine
+- If your computer broke at the train, like stack overflow, you need to re-execute
+
+To solve it, you can use a orchestration tool in cloud
